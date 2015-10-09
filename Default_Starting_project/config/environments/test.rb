@@ -37,6 +37,11 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  config.middleware.use Clearance::BackDoor
+  #Usage: visit root_path(as: user)
+  # Avoids having to log in while testing
+  
+  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
