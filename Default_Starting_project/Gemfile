@@ -35,6 +35,12 @@ gem 'newrelic_rpm'
 gem "possessive"
 gem 'best_in_place'
 
+gem 'clearance', '~> 1.11'
+# Add the above gem to list, then
+# bundle install
+# rails generate clearance:install
+#rake db:migrate
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
