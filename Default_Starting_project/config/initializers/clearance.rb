@@ -8,6 +8,8 @@ class SuspendedCheckGuard < Clearance::SignInGuard
   end
 
   def suspended?
+    return false if current_user.nil?
+    puts "current_user: #{current_user}"
     current_user.suspended?
   end
 end

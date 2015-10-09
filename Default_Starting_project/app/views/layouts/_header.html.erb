@@ -1,19 +1,18 @@
-<header>
-  <nav class="navbar navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <%= link_to 'Default Starting project', root_path, class: 'navbar-brand' %>
+        <%= link_to 'Default Starting project', root_path, class: 'navbar-brand', id: "logo" %>
       </div>
       <div id="navbar">
         <% if signed_in? %>
           <ul class="nav navbar-nav">
-            <li><%= link_to 'Add Page', '#' %></li>
+ 
           </ul>
         <% end %>
 
         <ul class="nav navbar-nav pull-right">
           <% if signed_in? %>
-            <li><span><%= current_user.email %></span></li>
+            <li><span id="banner-username"><%= current_user.email %></span></li>
             <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
           <% else %>
             <li><%= link_to 'Sign in', sign_in_path %></li>
@@ -21,5 +20,4 @@
         </ul>
       </div>
     </div>
-  </nav>
 </header>
