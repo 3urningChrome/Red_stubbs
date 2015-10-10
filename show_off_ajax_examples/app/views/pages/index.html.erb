@@ -1,0 +1,12 @@
+<div class="page-header"><h1>Welcome!</h1></div>
+describe product, get people to sign up
+
+
+goto products to see ajax examples. add product to cart shows product in cart with no refresh 
+
+Steps are:
+
+1. make sure what you wish to update through ajax is in it's own partial.
+2. Create js.erb (See line_items create.js.erb - returns the above partial)
+3. create a link with remote: true  to an action (see products/index.html.erb - carts)
+4. on action, have a format.js option. (See line_items_controller - create)
