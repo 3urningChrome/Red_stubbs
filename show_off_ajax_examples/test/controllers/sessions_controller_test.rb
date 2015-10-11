@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'clearance/test_unit'
 
-class sessionsControllerTest < ActionController::TestCase
+class SessionsControllerTest < ActionController::TestCase
   
 end
